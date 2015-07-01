@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.apifest.api;
+package com.apifest.api.params;
 
 import java.io.Serializable;
 
@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "endpoint_param_documentation")
-public class MappingEndpointParamDocumentation implements Serializable {
+public class ResultParamDocumentation implements Serializable {
 
     private static final long serialVersionUID = 2055836426063609094L;
 
@@ -40,13 +40,16 @@ public class MappingEndpointParamDocumentation implements Serializable {
     @XmlAttribute(name = "name", required = true)
     private String name;
 
+    @XmlAttribute(name = "description", required = true)
+    private String description;
+
     @XmlAttribute(name = "required", required = true)
     private boolean required;
 
-    public MappingEndpointParamDocumentation() {
+    public ResultParamDocumentation() {
     }
 
-    public MappingEndpointParamDocumentation(String name, String type, boolean required) {
+    public ResultParamDocumentation(String name, String type, boolean required) {
         this.setName(name);
         this.setType(type);
         this.setRequired(required);
@@ -68,6 +71,16 @@ public class MappingEndpointParamDocumentation implements Serializable {
         this.name = name;
     }
 
+    public String getDescription()
+    {
+        return description;
+    }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
+
     public boolean isRequired() {
         return required;
     }
@@ -75,4 +88,5 @@ public class MappingEndpointParamDocumentation implements Serializable {
     public void setRequired(boolean required) {
         this.required = required;
     }
+
 }
