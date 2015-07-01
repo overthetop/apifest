@@ -27,6 +27,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+import com.apifest.api.params.ExceptionDocumentation;
 import com.apifest.api.params.RequestParamDocumentation;
 import com.apifest.api.params.ResultParamDocumentation;
 
@@ -70,6 +71,9 @@ public class MappingEndpointDocumentation implements Serializable {
 
     @XmlElement(name = "resultParams", type = RequestParamDocumentation.class)
     private List<ResultParamDocumentation> resultParamsDocumentation;
+
+    @XmlElement(name = "exceptions", type = ExceptionDocumentation.class)
+    private List<ExceptionDocumentation> exceptionsDocumenatation;
 
     @XmlTransient
     private boolean hidden;
@@ -172,5 +176,15 @@ public class MappingEndpointDocumentation implements Serializable {
 
     public void setHidden(boolean hidden) {
         this.hidden = hidden;
+    }
+
+    public List<ExceptionDocumentation> getExceptionsDocumenatation()
+    {
+        return exceptionsDocumenatation;
+    }
+
+    public void setExceptionsDocumentation(List<ExceptionDocumentation> exceptionsDocumenatation)
+    {
+        this.exceptionsDocumenatation = exceptionsDocumenatation;
     }
 }
