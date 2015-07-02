@@ -43,9 +43,6 @@ public class RequestParamDocumentation implements Serializable {
     @XmlAttribute(name = "description", required = true)
     private String description;
 
-    @XmlAttribute(name = "default", required = true)
-    private String defaultValue;
-
     @XmlAttribute(name = "required", required = true)
     private boolean required;
 
@@ -92,13 +89,4 @@ public class RequestParamDocumentation implements Serializable {
         this.required = required;
     }
 
-    public String getDefaultValue()
-    {
-        return defaultValue;
-    }
-
-    public void setDefaultValue(String defaultValue)
-    {
-        this.defaultValue = defaultValue;
-    }
 }
