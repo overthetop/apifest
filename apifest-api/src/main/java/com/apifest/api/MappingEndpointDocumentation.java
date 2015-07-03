@@ -66,6 +66,9 @@ public class MappingEndpointDocumentation implements Serializable {
     @XmlAttribute(name = "group", required = true)
     private String group;
 
+    @XmlTransient
+    private int order;
+
     @XmlElement(name = "requestParams", type = RequestParamDocumentation.class)
     private List<RequestParamDocumentation> requestParamsDocumentation;
 
@@ -168,6 +171,16 @@ public class MappingEndpointDocumentation implements Serializable {
 
     public void setGroup(String group) {
         this.group = group;
+    }
+
+    public int getOrder()
+    {
+        return order;
+    }
+
+    public void setOrder(int order)
+    {
+        this.order = order;
     }
 
     public boolean isHidden() {
