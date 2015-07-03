@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "endpoint_param_documentation")
 public class ResultParamDocumentation implements Serializable {
 
-    private static final long serialVersionUID = 2055836426063609094L;
+    private static final long serialVersionUID = -5373720410834445877L;
 
     @XmlAttribute(name = "type", required = true)
     private String type;
