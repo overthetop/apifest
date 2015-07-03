@@ -21,15 +21,13 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
 
 /**
- * A wrapper type that holds the documentation for a endpoint parameter.
- * @author Ivan Georgiev
+ * A wrapper type that holds the documentation for a endpoint result parameter.
+ * @author Martin Boyanov
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "endpoint_param_documentation")
 public class ResultParamDocumentation implements Serializable {
 
     private static final long serialVersionUID = -5373720410834445877L;
